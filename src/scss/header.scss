@@ -1,0 +1,77 @@
+@import './variables.scss';
+.header {
+    width: 100%;
+    z-index: 4;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+
+    &__wrapper {
+        max-width: 1280px;
+        padding: 20px 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        color: $white;
+
+        span {
+            font-size: 45px;
+            font-family: 'Marck Script';
+        }
+    }
+
+    &__menu-toggler {
+        width: 40px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            height: 2px;
+            background-color: $white;
+            transition: all 0.2s ease;
+            border-radius: 10px;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                left: 10px;
+            }
+
+            &:nth-child(1) {
+                top: 0;
+                width: 20px;
+            }
+            &:nth-child(2) {
+                top: 10px;
+                width: 25px;
+            }
+            &:nth-child(3) {
+                top: 20px;
+                width: 30px;
+            }
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                span {
+                    background-color: $gold;
+                }
+            }
+        }
+
+        &--open {
+            span {
+                &:nth-child(1),
+                &:nth-child(2) {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

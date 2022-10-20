@@ -1,0 +1,92 @@
+@import './variables.scss';
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: $transition;
+    opacity: 0;
+    z-index: -1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+    }
+    &--open {
+        backdrop-filter: blur(5px);
+        transition: $transition;
+        z-index: 3;
+        opacity: 1;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 50%;
+    }
+
+    &__list-item {
+        margin-bottom: 25px;
+        text-align: right;
+    }
+    &__link {
+        text-transform: capitalize;
+        color: $white;
+        z-index: 4;
+        text-transform: uppercase;
+        font-size: 18px;
+        position: relative;
+        transition: $transition;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $gold;
+            left: 0;
+            height: 1px;
+        }
+
+        &::before {
+            bottom: 0;
+        }
+
+        &::after {
+            bottom: -4px;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                &::before,
+                &::after {
+                    animation: fillLine 0.8s forwards;
+                }
+
+                &::after {
+                    animation-delay: 0.1s;
+                }
+            }
+        }
+    }
+
+    &__social-link {
+        text-transform: none;
+    }
+}
+
+@keyframes fillLine {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}

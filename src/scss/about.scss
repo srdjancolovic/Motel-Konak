@@ -1,0 +1,25 @@
+.about {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__text-cta {
+        width: 50%;
+
+        p {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__offer {
+        width: 50%;
+    }
+
+    &__offer-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 200px);
+    }
+}

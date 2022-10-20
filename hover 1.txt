@@ -1,0 +1,29 @@
+&::after,
+    &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: $gold;
+        transition: $transition;
+    }
+
+    &::after {
+        top: 9px;
+        left: -1px;
+        transform: rotate(-28deg);
+    }
+    &::before {
+        bottom: 8px;
+        right: -1px;
+        transform: rotate(-28deg);
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            &::after,
+            &:before {
+                width: 35px;
+            }
+        }
+    }
