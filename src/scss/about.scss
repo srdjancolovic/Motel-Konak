@@ -1,25 +1,116 @@
+@import './variables.scss';
+@import './mixins.scss';
+#about {
+    &::before {
+        content: '';
+        display: block;
+        height: 80px;
+        margin-top: -80px;
+    }
+}
 .about {
     &__content {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+
+        @include mq('to', 1025) {
+            flex-direction: column;
+        }
     }
 
     &__text-cta {
         width: 50%;
 
+        @include mq('to', 1025) {
+            width: 100%;
+        }
         p {
-            margin-bottom: 30px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            padding-right: 30px;
+            @include mq('to', 1025) {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        @include mq('to', 577) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            &:first-child {
+                margin-right: 15px;
+                @include mq('to', 577) {
+                    margin-right: 0;
+                }
+
+                @include mq('to', 376) {
+                    margin-bottom: 15px;
+                    width: 100%;
+                }
+            }
         }
     }
 
     &__offer {
         width: 50%;
+
+        @include mq('to', 1025) {
+            width: 100%;
+            margin-top: 80px;
+        }
+        h2 {
+        }
     }
 
     &__offer-boxes {
+        margin-top: 30px;
         display: grid;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(2, 49%);
         grid-template-rows: repeat(2, 200px);
+        gap: 10px;
+
+        @include mq('to', 1025) {
+            grid-template-columns: repeat(2, 49.2%);
+        }
+
+        @include mq('to', 768) {
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: repeat(4, 220px);
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    &__offer-box {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 4px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        span {
+            position: absolute;
+            top: 20px;
+            background-color: $darkBlue;
+            padding: 10px 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 18px;
+        }
     }
 }

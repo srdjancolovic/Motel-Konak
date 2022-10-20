@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './mixins.scss';
 .nav-menu {
     position: fixed;
     width: 100%;
@@ -32,6 +33,13 @@
         flex-direction: column;
         align-items: flex-end;
         height: 50%;
+
+        @include mq('to', 577) {
+            height: 60%;
+        }
+        @include mq('to', 376) {
+            height: 90%;
+        }
     }
 
     &__list-item {
@@ -46,35 +54,8 @@
         font-size: 18px;
         position: relative;
         transition: $transition;
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            background-color: $gold;
-            left: 0;
-            height: 1px;
-        }
 
-        &::before {
-            bottom: 0;
-        }
-
-        &::after {
-            bottom: -4px;
-        }
-
-        @media (hover: hover) {
-            &:hover {
-                &::before,
-                &::after {
-                    animation: fillLine 0.8s forwards;
-                }
-
-                &::after {
-                    animation-delay: 0.1s;
-                }
-            }
-        }
+        @include linkHover;
     }
 
     &__social-link {

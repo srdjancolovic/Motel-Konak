@@ -1,7 +1,12 @@
 @import './variables.scss';
+@import './mixins.scss';
 .swiper {
     width: 100%;
     height: 100vh;
+
+    @include mq('to', 577) {
+        height: 70vh;
+    }
 }
 
 .swiper-slide {
@@ -13,7 +18,6 @@
         background-color: $overlay;
         width: 100%;
         height: 100%;
-
         top: 0;
     }
 
