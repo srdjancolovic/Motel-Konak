@@ -87,39 +87,45 @@
 
         a {
             color: $white;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
     &__offer-box {
         position: relative;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
         border-radius: 4px;
+        overflow: hidden;
+
+        @media (hover: hover) {
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
 
         img {
+            position: relative;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 4px;
+            transition: $transition;
         }
 
         span {
             position: absolute;
             top: 20px;
+            left: 0;
             background-color: $darkBlue;
             padding: 10px 20px;
             border-radius: 0 4px 4px 0;
             font-size: 18px;
-        }
-
-        a {
-            background-color: transparent;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            z-index: 2;
         }
     }
 }

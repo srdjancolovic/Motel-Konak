@@ -10,10 +10,6 @@ const html = document.querySelector('html');
 const togglerFn = () => {
     menuToggler.classList.toggle('header__menu-toggler--open');
     navMenu.classList.toggle('nav-menu--open');
-    if (header.classList.contains('header--scrolled')) {
-        console.log(true);
-        header.classList.toggle('header--scrolled-transparent');
-    }
 };
 
 //Click events

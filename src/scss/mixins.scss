@@ -1,0 +1,41 @@
+@import './variables.scss';
+
+//Media query mixin
+@mixin mq($type, $rezMin) {
+    @media only screen and (max-width: #{$rezMin - 1}px) {
+        @content;
+    }
+}
+
+@mixin linkHover {
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $gold;
+        left: 0;
+        height: 1px;
+    }
+
+    &::before {
+        bottom: 0;
+    }
+
+    &::after {
+        bottom: -4px;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            color: $gold;
+            &::before,
+            &::after {
+                animation: fillLine 0.8s forwards;
+            }
+
+            &::after {
+                animation-delay: 0.1s;
+            }
+        }
+    }
+}
