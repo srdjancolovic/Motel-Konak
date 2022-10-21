@@ -1,30 +1,88 @@
 @import './variables.scss';
 @import './mixins.scss';
-.swiper {
+
+//Landing page
+
+.landing-swiper {
     width: 100%;
     height: 100vh;
 
     @include mq('to', 577) {
         height: 70vh;
     }
+
+    &__slide {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $overlay;
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
 
-.swiper-slide {
-    position: relative;
+//Menu swiper
 
-    &::after {
-        content: '';
-        position: absolute;
-        background-color: $overlay;
-        width: 100%;
-        height: 100%;
-        top: 0;
+.menu-swiper {
+    width: 95%;
+    height: 500px;
+
+    &__slide {
+        background-color: green;
     }
 
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    &__next-btn,
+    &__prev-btn {
+        color: $gold;
+
+        &::after {
+            top: 100%;
+            transform: translateY(100%);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: $gold;
+            transition: $transition;
+            bottom: -22.5px;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                &::before {
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    &__next-btn {
+        &::before {
+            left: -8px;
+        }
+    }
+
+    &__prev-btn {
+        &::before {
+            left: 6px;
+        }
+    }
+
+    &__slide-counter {
+        color: $gold;
     }
 }

@@ -48,7 +48,7 @@
                         <a href="#about" class="nav-menu__link">O nama</a>
                     </li>
                     <li class="nav-menu__list-item">
-                        <a href="" class="nav-menu__link">Jelovnik</a>
+                        <a href="#menu" class="nav-menu__link">Jelovnik</a>
                     </li>
                     <li class="nav-menu__list-item">
                         <a href="" class="nav-menu__link">Kontakt</a>
@@ -84,25 +84,25 @@
 
         <!-- Main Section -->
         <main class="main">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./assets/bg-1.webp" alt="" />
+            <div class="swiper landing-swiper">
+                <div class="swiper-wrapper landing-swiper__wrapper">
+                    <div class="swiper-slide landing-swiper__slide">
+                        <img src="./assets/bg-1.webp" alt="Mosko panorama" />
                     </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/t2.webp" alt="" />
+                    <div class="swiper-slide landing-swiper__slide">
+                        <img src="./assets/t2.webp" alt="Restoran" />
                     </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/r4.webp" alt="" />
+                    <div class="swiper-slide landing-swiper__slide">
+                        <img src="./assets/r4.webp" alt="Restoran" />
                     </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/k4.webp" alt="" />
+                    <div class="swiper-slide landing-swiper__slide">
+                        <img src="./assets/k4.webp" alt="Konoba" />
                     </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/sb3.webp" alt="" />
+                    <div class="swiper-slide landing-swiper__slide">
+                        <img src="./assets/sb3.webp" alt="Sobe" />
                     </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/s11.webp" alt="" />
+                    <div class="swiper-slide landing-swiper__slide">
+                        <img src="./assets/s11.webp" alt="Salon" />
                     </div>
                 </div>
             </div>
@@ -410,6 +410,38 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="menu container">
+                <h2>Jelovnik</h2>
+                <div class="swiper menu-swiper">
+                    <div class="swiper-wrapper menu-swiper__wrapper">
+                        <div class="swiper-slide menu-swiper__slide">
+                            Slide 1
+                        </div>
+                        <div class="swiper-slide menu-swiper__slide">
+                            Slide 2
+                        </div>
+                        <div class="swiper-slide menu-swiper__slide">
+                            Slide 3
+                        </div>
+                        <div class="swiper-slide menu-swiper__slide">
+                            Slide 4
+                        </div>
+                        <div class="swiper-slide menu-swiper__slide">
+                            Slide 5
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="swiper-button-next menu-swiper__btn menu-swiper__next-btn"
+                ></div>
+                <div
+                    class="swiper-button-prev menu-swiper__btn menu-swiper__prev-btn"
+                ></div>
+                <div class="swiper-pagination menu-swiper__slide-counter"></div>
             </div>
         </section>
         <script src="./js/jquery.js"></script>
