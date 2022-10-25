@@ -18,7 +18,7 @@
 
     &__wrapper {
         max-width: 1280px;
-        padding: 20px 30px;
+        padding: 30px 25px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -47,7 +47,7 @@
         height: 30px;
         position: relative;
         cursor: pointer;
-
+        transform: translateY(4px);
         span {
             position: absolute;
             height: 2px;
@@ -58,7 +58,7 @@
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3) {
-                left: 15px;
+                left: 10px;
             }
 
             &:nth-child(1) {

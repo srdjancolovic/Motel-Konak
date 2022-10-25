@@ -1,12 +1,7 @@
 @import './variables.scss';
 @import './mixins.scss';
 #about {
-    &::before {
-        content: '';
-        display: block;
-        height: 80px;
-        margin-top: -80px;
-    }
+   @include offset;
 }
 .about {
     &__content {

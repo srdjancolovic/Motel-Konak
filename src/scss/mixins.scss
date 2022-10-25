@@ -1,9 +1,25 @@
 @import './variables.scss';
 
 //Media query mixin
-@mixin mq($type, $rezMin) {
-    @media only screen and (max-width: #{$rezMin - 1}px) {
-        @content;
+@mixin mq($type, $rezMin, $rezMax: null) {
+    @if ($type== 'from') {
+        @media only screen and (min-width: #{$rezMin}px) {
+            @content;
+        }
+    }
+
+    // ========= TO =========
+    @else if ($type== 'to') {
+        @media only screen and (max-width: #{$rezMin - 1}px) {
+            @content;
+        }
+    }
+
+    // ========= FROM TO =========
+    @else if ($type== 'fromto') {
+        @media only screen and (min-width: #{$rezMin}px) and (max-width: #{$rezMax - 1}px) {
+            @content;
+        }
     }
 }
 
@@ -36,6 +52,20 @@
             &::after {
                 animation-delay: 0.1s;
             }
+        }
+    }
+}
+
+@mixin offset {
+    &::before {
+        content: '';
+        display: block;
+        height: 80px;
+        margin-top: -80px;
+
+        @include mq('to', 577) {
+            height: 70px;
+            margin-top: -69px;
         }
     }
 }

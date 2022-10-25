@@ -1,9 +1,55 @@
+@import './variables.scss';
+@import './mixins.scss';
+#menu {
+    @include offset;
+}
 .menu {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom:100px !important;
+
     h2 {
         margin-bottom: 30px;
+    }
+
+    &__meal {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        
+        @include mq('to', 577) {
+        margin-bottom: 13px;
+
+        }
+
+        &--added-padding {
+            padding-top: 30px;
+        }
+
+        p,
+        span {
+            color: $white;
+            font-weight: 400;
+        }
+
+        p {
+            @include mq('to', 577) {
+                max-width: 230px;
+            }
+            span {
+                font-weight: 300;
+            }
+        }
+    }
+
+    &__meal-name {
+    }
+    &__meal-desc {
+        font-size: 14px;
+        font-weight: 300;
+        font-style: italic;
+        margin-top: -5px;
     }
 }

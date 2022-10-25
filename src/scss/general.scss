@@ -58,6 +58,16 @@ h2 {
     }
 }
 
+h3 {
+    font-size: 25px;
+    line-height: 33px;
+
+    @include mq('to', 577) {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
 a,
 div,
 span {
@@ -76,8 +86,24 @@ ul {
 
 p {
     font-weight: 300;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 19px;
+    line-height: 28px;
+
+    @include mq('to', 577) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+span {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 28px;
+
+    @include mq('to', 577) {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 .container {
@@ -90,7 +116,12 @@ p {
     }
 
     &:last-child {
-        padding: 80px 25px 60px;
+        padding: 120px 25px 0;
+
+        @include mq('to', 577) {
+        padding: 100px 25px 0;
+
+        }
     }
 }
 
