@@ -1,0 +1,80 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+#contact {
+    @include offset;
+}
+
+.contact {
+    padding-bottom: 100px;
+
+    @include mq('to', 577) {
+        padding-bottom: 80px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+        h2 {
+            margin: 0 auto 30px;
+        }
+
+        p {
+            margin-bottom: 10px;
+
+            a {
+                transition: $transition;
+                color: $gold;
+                position: relative;
+                @include linkHover;
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__links {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+        a {
+            transition: $transition;
+            color: $gold;
+            position: relative;
+            @include linkHover;
+        }
+    }
+
+    &__copyright {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+
+        span {
+            font-size: 14px;
+            color: $white;
+
+            a {
+                color: $white;
+                position: relative;
+                transition: $transition;
+
+                &::before,
+                &::after {
+                    width: 0 !important;
+                }
+
+                @include linkHover;
+            }
+        }
+    }
+}

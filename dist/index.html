@@ -4,6 +4,19 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content="Motel Konak Mosko je tradicionalni restoran poznat po jagnjetini sa tradicijom koja traje vec 50 godina. Posjetite nas i uvjerite se u kvalitet naših usluga."
+        />
+        <meta
+            name="keywords"
+            content="Motel Konak, Trebinje, Mosko, jagnjetina, restoran, salon, hotel, svadba, hrana, pice, teletina, roštilj, vino, hercegovina"
+        />
+        <meta
+            property="og:image"
+            content="https://motelkonakmosko.com/assets/ogImageMotelKontak.jpg"
+        />
+        <meta name="theme-color" content="#0b1315" />
 
         <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +33,7 @@
             href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
             rel="stylesheet"
         />
-        <title>Starting file heading</title>
+        <title>Motel KONAK Mosko</title>
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./css/style.css" />
@@ -34,7 +47,7 @@
     <body>
         <!-- Preloader -->
         <div class="preloader">
-            <img src="./assets/infinityLoader.svg" alt="" />
+            <img src="./assets/infinityLoader.svg" alt="Loader" />
         </div>
 
         <!-- Nav menu -->
@@ -42,27 +55,41 @@
             <div class="nav-menu__wrapper container container--nav">
                 <ul class="nav-menu__list">
                     <li class="nav-menu__list-item">
-                        <a href="" class="nav-menu__link">Početna</a>
+                        <a href="#main" class="nav-menu__link smooth-scroll"
+                            >Početna</a
+                        >
                     </li>
                     <li class="nav-menu__list-item">
-                        <a href="#about" class="nav-menu__link">O nama</a>
+                        <a href="#about" class="nav-menu__link smooth-scroll"
+                            >O nama</a
+                        >
                     </li>
                     <li class="nav-menu__list-item">
-                        <a href="#menu" class="nav-menu__link">Jelovnik</a>
+                        <a href="#menu" class="nav-menu__link smooth-scroll"
+                            >Jelovnik</a
+                        >
                     </li>
                     <li class="nav-menu__list-item">
-                        <a href="" class="nav-menu__link">Kontakt</a>
+                        <a href="#contact" class="nav-menu__link smooth-scroll"
+                            >Kontakt</a
+                        >
                     </li>
                 </ul>
 
                 <ul class="nav-menu__list nav-menu__social-list">
                     <li class="nav-menu__list-item">
-                        <a href="" class="nav-menu__link nav-menu__social-link"
+                        <a
+                            href="https://www.facebook.com/MotelKonakMosko/"
+                            class="nav-menu__link nav-menu__social-link"
+                            target="_blank"
                             >Facebook</a
                         >
                     </li>
                     <li class="nav-menu__list-item">
-                        <a href="" class="nav-menu__link nav-menu__social-link"
+                        <a
+                            href="https://www.instagram.com/motelkonakmosko/?hl=en"
+                            class="nav-menu__link nav-menu__social-link"
+                            target="_blank"
                             >Instagram</a
                         >
                     </li>
@@ -73,7 +100,9 @@
         <!-- Header with logo and menu toggler -->
         <div class="header">
             <div class="header__wrapper">
-                <a href="" class="header__logo"><span>Motel Konak</span></a>
+                <a href="#main" class="header__logo smooth-scroll"
+                    ><span>Motel Konak</span></a
+                >
                 <div class="header__menu-toggler">
                     <span></span>
                     <span></span>
@@ -82,13 +111,15 @@
             </div>
         </div>
 
+        <!-- Top btn -->
+        <!-- <a href="#main" class="top-btn smooth-scroll">
+            <i class="icon-up-arrow"></i>
+        </a> -->
+
         <!-- Main Section -->
-        <main class="main">
+        <main class="main" id="main">
             <div class="swiper landing-swiper">
                 <div class="swiper-wrapper landing-swiper__wrapper">
-                    <div class="swiper-slide landing-swiper__slide">
-                        <img src="./assets/bg-1.webp" alt="Mosko panorama" />
-                    </div>
                     <div class="swiper-slide landing-swiper__slide">
                         <img src="./assets/t2.webp" alt="Restoran" />
                     </div>
@@ -112,7 +143,9 @@
                     <h1>Motel Konak</h1>
                     <h2>Mosko</h2>
                 </div>
-                <a href="#about" class="main__cta btn btn--transparent"
+                <a
+                    href="#about"
+                    class="main__cta btn btn--transparent smooth-scroll"
                     >O nama</a
                 >
             </div>
@@ -147,8 +180,16 @@
                         </p>
 
                         <div class="about__actions">
-                            <div><a href="" class="btn">Jelovnik</a></div>
-                            <div><a href="" class="btn">Kontakt</a></div>
+                            <div>
+                                <a href="#menu" class="btn smooth-scroll"
+                                    >Jelovnik</a
+                                >
+                            </div>
+                            <div>
+                                <a href="#contact" class="btn smooth-scroll"
+                                    >Kontakt</a
+                                >
+                            </div>
                         </div>
                     </div>
 
@@ -359,9 +400,8 @@
                             </div>
                             <div class="about__offer-box">
                                 <span>Hotel</span>
-                                <!-- <img src="./assets/t2.webp" alt="Restoran" /> -->
                                 <a
-                                    href="./assets/sb3T.webp"
+                                    href="./assets/sb3.webp"
                                     data-lightbox="Hotel"
                                     data-title="Hotel"
                                 >
@@ -413,12 +453,17 @@
             </div>
         </section>
 
+        <!-- Menu section -->
         <section id="menu">
             <div class="menu container">
                 <h2>Jelovnik</h2>
                 <div class="swiper menu-swiper">
                     <div class="swiper-wrapper menu-swiper__wrapper">
                         <div class="swiper-slide menu-swiper__slide">
+                            <h3 class="menu-swiper__price-hint">
+                                Cijene su izražene u KM
+                            </h3>
+
                             <h3>Hladna predjela</h3>
 
                             <div class="menu__meal">
@@ -445,7 +490,7 @@
                                 </div>
                                 <span class="menu__meal-item">10.00</span>
                             </div>
-                            
+
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
@@ -486,18 +531,14 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Cicvara 
-                                    </p>
+                                    <p class="menur__meal-name">Cicvara</p>
                                 </div>
                                 <span class="menu__meal-item">10.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Pohovani sir 
-                                    </p>
+                                    <p class="menur__meal-name">Pohovani sir</p>
                                 </div>
                                 <span class="menu__meal-item">7.00</span>
                             </div>
@@ -510,16 +551,13 @@
                                 </div>
                                 <span class="menu__meal-item">12.00/20.00</span>
                             </div>
-
                         </div>
                         <div class="swiper-slide menu-swiper__slide">
                             <h3>Čorbe</h3>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Teleća čorba
-                                    </p>
+                                    <p class="menur__meal-name">Teleća čorba</p>
                                 </div>
                                 <span class="menu__meal-item">5.00</span>
                             </div>
@@ -535,9 +573,7 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Riblja čorba
-                                    </p>
+                                    <p class="menur__meal-name">Riblja čorba</p>
                                 </div>
                                 <span class="menu__meal-item">5.00</span>
                             </div>
@@ -561,7 +597,7 @@
                                 </div>
                                 <span class="menu__meal-item">45.00</span>
                             </div>
-                            
+
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
@@ -570,7 +606,7 @@
                                 </div>
                                 <span class="menu__meal-item">45.00</span>
                             </div>
-                            
+
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
@@ -584,25 +620,19 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Som
-                                    </p>
+                                    <p class="menur__meal-name">Som</p>
                                 </div>
                                 <span class="menu__meal-item">14.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Šaran
-                                    </p>
+                                    <p class="menur__meal-name">Šaran</p>
                                 </div>
                                 <span class="menu__meal-item">14.00</span>
                             </div>
                         </div>
                         <div class="swiper-slide menu-swiper__slide">
-                            
-
                             <div class="menu__meal menu__meal--added-padding">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
@@ -632,18 +662,14 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Tuna stek
-                                    </p>
+                                    <p class="menur__meal-name">Tuna stek</p>
                                 </div>
                                 <span class="menu__meal-item">25.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Smuđ
-                                    </p>
+                                    <p class="menur__meal-name">Smuđ</p>
                                 </div>
                                 <span class="menu__meal-item">15.00</span>
                             </div>
@@ -671,21 +697,26 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Karađorđeva šnicla (svinjska, mala/velika) 
-
+                                        Karađorđeva šnicla (svinjska,
+                                        mala/velika)
                                     </p>
                                 </div>
-                                <span class="menu__meal-item">11.00/ <br> 16.00</span>
+                                <span class="menu__meal-item"
+                                    >11.00/ <br />
+                                    16.00</span
+                                >
                             </div>
 
-                            <div class="menu__meal ">
+                            <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Karađorđeva šnicla (teleća, mala/velika) 
-
+                                        Karađorđeva šnicla (teleća, mala/velika)
                                     </p>
                                 </div>
-                                <span class="menu__meal-item">13.00/ <br> 18.00</span>
+                                <span class="menu__meal-item"
+                                    >13.00/ <br />
+                                    18.00</span
+                                >
                             </div>
 
                             <div class="menu__meal">
@@ -697,15 +728,12 @@
                                 <span class="menu__meal-item">16.00</span>
                             </div>
 
-                            <div class="menu__meal ">
+                            <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Natur šnicla
-                                    </p>
+                                    <p class="menur__meal-name">Natur šnicla</p>
                                 </div>
                                 <span class="menu__meal-item">14.00</span>
                             </div>
-
                         </div>
                         <div class="swiper-slide menu-swiper__slide">
                             <div class="menu__meal menu__meal--added-padding">
@@ -720,10 +748,14 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Punjena rolovana piletina <span>(mala/velika)</span>
+                                        Punjena rolovana piletina
+                                        <span>(mala/velika)</span>
                                     </p>
                                 </div>
-                                <span class="menu__meal-item">11.00/ <br> 17.00</span>
+                                <span class="menu__meal-item"
+                                    >11.00/ <br />
+                                    17.00</span
+                                >
                             </div>
 
                             <div class="menu__meal">
@@ -737,27 +769,21 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Pileći batak
-                                    </p>
+                                    <p class="menur__meal-name">Pileći batak</p>
                                 </div>
                                 <span class="menu__meal-item">12.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Mješano meso
-                                    </p>
+                                    <p class="menur__meal-name">Mješano meso</p>
                                 </div>
                                 <span class="menu__meal-item">16.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Ražnjići
-                                    </p>
+                                    <p class="menur__meal-name">Ražnjići</p>
                                 </div>
                                 <span class="menu__meal-item">12.00</span>
                             </div>
@@ -797,7 +823,7 @@
                                 </div>
                                 <span class="menu__meal-item">14.00</span>
                             </div>
-                            
+
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
@@ -818,14 +844,10 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                       Kobasica
-                                    </p>
+                                    <p class="menur__meal-name">Kobasica</p>
                                 </div>
                                 <span class="menu__meal-item">12.00</span>
                             </div>
-
-                            
                         </div>
                         <div class="swiper-slide menu-swiper__slide">
                             <h3>Salate</h3>
@@ -868,9 +890,7 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Slatki kupus
-                                    </p>
+                                    <p class="menur__meal-name">Slatki kupus</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
@@ -886,9 +906,7 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Paradajz
-                                    </p>
+                                    <p class="menur__meal-name">Paradajz</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
@@ -904,18 +922,14 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Kiseli kupus
-                                    </p>
+                                    <p class="menur__meal-name">Kiseli kupus</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Mladi luk
-                                    </p>
+                                    <p class="menur__meal-name">Mladi luk</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
@@ -932,7 +946,7 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Pečena paprika 
+                                        Pečena paprika
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
@@ -958,46 +972,37 @@
                         </div>
 
                         <div class="swiper-slide menu-swiper__slide">
-                            
                             <h3>Variva</h3>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Pomfrit
-                                    </p>
+                                    <p class="menur__meal-name">Pomfrit</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Riža
-                                    </p>
+                                    <p class="menur__meal-name">Riža</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Grašak
-                                    </p>
+                                    <p class="menur__meal-name">Grašak</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Blitva
-                                    </p>
+                                    <p class="menur__meal-name">Blitva</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
-                            <div class="menu__meal ">
+                            <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
                                         Priganice <span>(Uštipci)</span>
@@ -1008,9 +1013,7 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Krompir
-                                    </p>
+                                    <p class="menur__meal-name">Krompir</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
@@ -1020,7 +1023,11 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Palačinke <span>(eurokrem/plazma, eurokrem, čokolada, orasi, šećer, džem)</span>
+                                        Palačinke
+                                        <span
+                                            >(eurokrem/plazma, eurokrem,
+                                            čokolada, orasi, šećer, džem)</span
+                                        >
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">4.00</span>
@@ -1028,16 +1035,13 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Baklava
-                                    </p>
+                                    <p class="menur__meal-name">Baklava</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
                         </div>
 
                         <div class="swiper-slide menu-swiper__slide">
-                            
                             <h3>Bijela vina</h3>
 
                             <div class="menu__meal">
@@ -1142,7 +1146,7 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Tvrdoš Žilavka  <span>0,75</span>
+                                        Tvrdoš Žilavka <span>0,75</span>
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">30.00</span>
@@ -1159,7 +1163,6 @@
                         </div>
 
                         <div class="swiper-slide menu-swiper__slide">
-                            
                             <h3>Crvena vina</h3>
 
                             <div class="menu__meal">
@@ -1281,14 +1284,18 @@
                         </div>
 
                         <div class="swiper-slide menu-swiper__slide">
-
                             <h3>Bezalkoholna pića</h3>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Pepsi
-                                    </p>
+                                    <p class="menur__meal-name">Pepsi</p>
+                                </div>
+                                <span class="menu__meal-item">3.00</span>
+                            </div>
+
+                            <div class="menu__meal">
+                                <div class="menu__meal-item">
+                                    <p class="menur__meal-name">Mirinda</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
@@ -1296,7 +1303,8 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Mirinda
+                                        Schwepps
+                                        <span>(Biter Lemon/Tonic)</span>
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
@@ -1304,107 +1312,76 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Schwepps <span>(Biter Lemon/Tonic)</span>
-                                    </p>
+                                    <p class="menur__meal-name">7up</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        7up
-                                    </p>
+                                    <p class="menur__meal-name">Cocta</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Cocta
-                                    </p>
+                                    <p class="menur__meal-name">Jabuka</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Jabuka
-                                    </p>
+                                    <p class="menur__meal-name">Naranča</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Naranča
-                                    </p>
+                                    <p class="menur__meal-name">Breskva</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Breskva
-                                    </p>
+                                    <p class="menur__meal-name">Višnja</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Višnja
-                                    </p>
+                                    <p class="menur__meal-name">Jagoda</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Jagoda
-                                    </p>
+                                    <p class="menur__meal-name">Borovnica</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Borovnica
-                                    </p>
+                                    <p class="menur__meal-name">Limunada</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Limunada
-                                    </p>
+                                    <p class="menur__meal-name">Orandžada</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
-
-                            <div class="menu__meal">
-                                <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Orandžada
-                                    </p>
-                                </div>
-                                <span class="menu__meal-item">3.00</span>
-                            </div>
-
                         </div>
 
                         <div class="swiper-slide menu-swiper__slide">
-
                             <div class="menu__meal menu__meal--added-padding">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
@@ -1416,9 +1393,7 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Cedevita
-                                    </p>
+                                    <p class="menur__meal-name">Cedevita</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
@@ -1523,13 +1498,9 @@
                                 </div>
                                 <span class="menu__meal-item">3.50</span>
                             </div>
-
-                           
-
                         </div>
 
                         <div class="swiper-slide menu-swiper__slide">
-
                             <div class="menu__meal menu__meal--added-padding">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
@@ -1588,18 +1559,14 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Red bull
-                                    </p>
+                                    <p class="menur__meal-name">Red bull</p>
                                 </div>
                                 <span class="menu__meal-item">5.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Guarana
-                                    </p>
+                                    <p class="menur__meal-name">Guarana</p>
                                 </div>
                                 <span class="menu__meal-item">4.00</span>
                             </div>
@@ -1608,9 +1575,7 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Kafa
-                                    </p>
+                                    <p class="menur__meal-name">Kafa</p>
                                 </div>
                                 <span class="menu__meal-item">1.50</span>
                             </div>
@@ -1618,7 +1583,8 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Nes kafa <span>(čokolada/vanilija)</span>
+                                        Nes kafa
+                                        <span>(čokolada/vanilija)</span>
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">2.50</span>
@@ -1626,86 +1592,67 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Čaj
-                                    </p>
+                                    <p class="menur__meal-name">Čaj</p>
                                 </div>
                                 <span class="menu__meal-item">1.50</span>
                             </div>
                         </div>
 
                         <div class="swiper-slide menu-swiper__slide">
-
                             <h3>Likeri</h3>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Pelinkovac
-                                    </p>
+                                    <p class="menur__meal-name">Pelinkovac</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Vlahovac
-                                    </p>
+                                    <p class="menur__meal-name">Vlahovac</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Jagermeister
-                                    </p>
+                                    <p class="menur__meal-name">Jagermeister</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Gorki list
-                                    </p>
+                                    <p class="menur__meal-name">Gorki list</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Baileys
-                                    </p>
+                                    <p class="menur__meal-name">Baileys</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Campari
-                                    </p>
+                                    <p class="menur__meal-name">Campari</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Kruškovac
-                                    </p>
+                                    <p class="menur__meal-name">Kruškovac</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Šeri brandy
-                                    </p>
+                                    <p class="menur__meal-name">Šeri brandy</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
@@ -1714,102 +1661,79 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Loza
-                                    </p>
+                                    <p class="menur__meal-name">Loza</p>
                                 </div>
                                 <span class="menu__meal-item">1.50</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Travarica
-                                    </p>
+                                    <p class="menur__meal-name">Travarica</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Kajsija
-                                    </p>
+                                    <p class="menur__meal-name">Kajsija</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
                         </div>
 
                         <div class="swiper-slide menu-swiper__slide">
-
                             <div class="menu__meal menu__meal--added-padding">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Dunja
-                                    </p>
+                                    <p class="menur__meal-name">Dunja</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Šljiva
-                                    </p>
+                                    <p class="menur__meal-name">Šljiva</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Meduška
-                                    </p>
+                                    <p class="menur__meal-name">Meduška</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Kruška
-                                    </p>
+                                    <p class="menur__meal-name">Kruška</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Baba Višnja
-                                    </p>
+                                    <p class="menur__meal-name">Baba Višnja</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Viljamovka
-                                    </p>
+                                    <p class="menur__meal-name">Viljamovka</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Vinjak
-                                    </p>
+                                    <p class="menur__meal-name">Vinjak</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Štok
-                                    </p>
+                                    <p class="menur__meal-name">Štok</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
@@ -1825,40 +1749,33 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Vodka Baltic
-                                    </p>
+                                    <p class="menur__meal-name">Vodka Baltic</p>
                                 </div>
                                 <span class="menu__meal-item">2.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Džin
-                                    </p>
+                                    <p class="menur__meal-name">Džin</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Martini 
-                                    </p>
+                                    <p class="menur__meal-name">Martini</p>
                                 </div>
                                 <span class="menu__meal-item">5.00</span>
                             </div>
                         </div>
 
                         <div class="swiper-slide menu-swiper__slide">
-
                             <h3>Viskiji</h3>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Jack Daniel's 
+                                        Jack Daniel's
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">5.00</span>
@@ -1866,9 +1783,7 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Chivas Regal 
-                                    </p>
+                                    <p class="menur__meal-name">Chivas Regal</p>
                                 </div>
                                 <span class="menu__meal-item">5.00</span>
                             </div>
@@ -1876,7 +1791,7 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Johnnie Walker 
+                                        Johnnie Walker
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
@@ -1884,28 +1799,18 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Ballantines 
-                                    </p>
+                                    <p class="menur__meal-name">Ballantines</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Jameson 
-                                    </p>
+                                    <p class="menur__meal-name">Jameson</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
                         </div>
-
-
-                            
-
-
-
                     </div>
                 </div>
                 <div
@@ -1917,9 +1822,59 @@
                 <div class="swiper-pagination menu-swiper__slide-counter"></div>
             </div>
         </section>
+
+        <!-- Contact section -->
+        <section id="contact">
+            <div class="contact container">
+                <div class="contact__content">
+                    <h2>Kontakt</h2>
+                    <p>Motel Konak, Trebinje-Mosko</p>
+                    <p>Radno vrijeme: 06:30-23:00</p>
+
+                    <p><a href="tel:+387 59 481 288">+387 59 481 288</a></p>
+                    <p>
+                        <a href="mailto:motelkonak@yahoo.com"
+                            >motelkonak@yahoo.com</a
+                        >
+                    </p>
+
+                    <div class="contact__links">
+                        <a
+                            href="https://www.facebook.com/MotelKonakMosko/"
+                            target="_blank"
+                            >Facebook</a
+                        >
+                        <a
+                            href="https://www.instagram.com/motelkonakmosko/?hl=en"
+                            target="_blank"
+                            >Instagram</a
+                        >
+                        <a
+                            href="https://www.booking.com/hotel/ba/motel-mosko.hr.html"
+                            target="_blank"
+                            >Booking</a
+                        >
+                        <a
+                            href="https://www.google.com/maps/place/Konak+Motel,+Mosko+bb,+Trebinje+89101/@42.7691561,18.3993569,17z/data=!4m5!3m4!1s0x134c67bec073b9b7:0x3335dec19b2051d1!8m2!3d42.7691561!4d18.3993569"
+                            target="_blank"
+                            >Mapa</a
+                        >
+                    </div>
+                </div>
+                <div class="contact__copyright">
+                    <span>©Motel Konak 2022.</span>
+                    <span
+                        ><a href="https://srdjancolovic.com/"
+                            >Website by Srdjan Colovic</a
+                        ></span
+                    >
+                </div>
+            </div>
+        </section>
+        <!-- Script files -->
+        <script src="./js/gsap.js"></script>
         <script src="./js/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js "></script>
-
         <script src="./js/swiper-bundle.min.js"></script>
         <script src="./js/script.js"></script>
     </body>

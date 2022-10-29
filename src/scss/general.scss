@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './mixins.scss';
+
 * {
     padding: 0;
     margin: 0;
@@ -45,17 +46,6 @@ h2 {
         font-size: 30px;
         line-height: 38px;
     }
-
-    &::after {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 2px;
-        background-color: $gold;
-        top: 50%;
-        right: -35px;
-        transform: translateY(-50%);
-    }
 }
 
 h3 {
@@ -88,6 +78,7 @@ p {
     font-weight: 300;
     font-size: 19px;
     line-height: 28px;
+    letter-spacing: 0.5px;
 
     @include mq('to', 577) {
         font-size: 18px;
@@ -112,22 +103,11 @@ span {
     margin: 0 auto;
 
     @include mq('to', 577) {
-        padding: 80px 25px 0;
-    }
-
-    &:last-child {
-        padding: 120px 25px 0;
-
-        @include mq('to', 577) {
-        padding: 100px 25px 0;
-
-        }
+        padding: 100px 25px 10px;
     }
 }
 
 .btn {
-    padding: 15px 40px;
-    font-size: 16px;
     line-height: 32px;
     border: 1px solid $gold;
     color: $white;
@@ -136,7 +116,12 @@ span {
     position: relative;
     background-color: $darkBlue;
 
-    @include mq('to', 577) {
+    @include mq('from', 577) {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
+
+    @include mq('fromto', 376, 577) {
         padding: 15px 35px;
         font-size: 15px;
     }

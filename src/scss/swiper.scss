@@ -1,8 +1,7 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-//Landing page
-
+//Landing page swiper
 .landing-swiper {
     width: 100%;
     height: 100vh;
@@ -33,7 +32,6 @@
 }
 
 //Menu swiper
-
 .menu-swiper {
     width: 100%;
     height: 650px;
@@ -42,8 +40,6 @@
     @include mq('to', 577) {
         height: 600px;
     }
-    
-
 
     &__slide {
         border: 2px solid $gold;
@@ -60,11 +56,15 @@
         }
     }
 
+    &__price-hint {
+        color: $gold;
+        font-style: italic;
+    }
+
     &__next-btn,
     &__prev-btn {
         color: $gold;
-
-       
+        z-index: 1;
 
         &::after {
             top: 100%;
@@ -105,12 +105,12 @@
 
     &__prev-btn {
         left: -25px;
-        
+
         &::before {
             left: 6px;
         }
 
-        @include mq('fromto',768, 1400) {
+        @include mq('fromto', 768, 1400) {
             top: 90%;
             left: 85%;
         }
@@ -128,5 +128,6 @@
         width: fit-content;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 1;
     }
 }

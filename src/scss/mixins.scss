@@ -23,6 +23,15 @@
     }
 }
 
+@keyframes fillLine {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
 @mixin linkHover {
     &::before,
     &::after {
@@ -31,6 +40,10 @@
         background-color: $gold;
         left: 0;
         height: 1px;
+
+        @include mq('to', 1025) {
+            width: 100%;
+        }
     }
 
     &::before {
@@ -65,7 +78,7 @@
 
         @include mq('to', 577) {
             height: 70px;
-            margin-top: -69px;
+            margin-top: -70px;
         }
     }
 }
