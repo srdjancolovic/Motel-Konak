@@ -26,7 +26,7 @@
         p {
             margin-top: 30px;
             margin-bottom: 40px;
-            padding-right: 30px;
+            padding-right: 40px;
 
             @include mq('to', 1025) {
                 padding-right: 0;

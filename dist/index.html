@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta
             name="description"
-            content="Motel Konak Mosko je tradicionalni restoran poznat po jagnjetini sa tradicijom koja traje vec 50 godina. Posjetite nas i uvjerite se u kvalitet naših usluga."
+            content="Motel Konak Mosko je tradicionalni restoran poznat po jagnjetini sa tradicijom koja traje vec 50 godina. U sklopu objekta se nalazi hercegovačka kuća, hotel, svadbeni salon i vinarija. Posjetite nas i uvjerite se u kvalitet naših usluga."
         />
         <meta
             name="keywords"
@@ -14,7 +14,7 @@
         />
         <meta
             property="og:image"
-            content="https://motelkonakmosko.com/assets/ogImageMotelKontak.jpg"
+            content="https://motelkonakmosko.com/assets/ogImageMotelKonak.jpg"
         />
         <meta name="theme-color" content="#0b1315" />
 
@@ -25,6 +25,9 @@
             href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
             rel="stylesheet"
         />
+
+        <!-- Favicon -->
+        <link rel="icon" href="./assets/motelKonakFavicon.ico" />
 
         <!-- Font for Logo -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -111,17 +114,17 @@
             </div>
         </div>
 
-        <!-- Top btn -->
-        <!-- <a href="#main" class="top-btn smooth-scroll">
-            <i class="icon-up-arrow"></i>
-        </a> -->
-
         <!-- Main Section -->
         <main class="main" id="main">
             <div class="swiper landing-swiper">
                 <div class="swiper-wrapper landing-swiper__wrapper">
                     <div class="swiper-slide landing-swiper__slide">
                         <img src="./assets/t2.webp" alt="Restoran" />
+                    </div>
+                    <div
+                        class="swiper-slide landing-swiper__slide landing-swiper__slide--show-mobile"
+                    >
+                        <img src="./assets/t5.webp" alt="Restoran" />
                     </div>
                     <div class="swiper-slide landing-swiper__slide">
                         <img src="./assets/r4.webp" alt="Restoran" />
@@ -156,15 +159,13 @@
             <div class="about container">
                 <div class="about__content">
                     <div class="about__text-cta">
-                        <h2>O nama</h2>
-                        <p>
+                        <h2 class="slideInUp">O nama</h2>
+                        <p class="slideInUp">
                             Objekat je počeo sa radom 1972. godine pod nazivom
                             "Lovac". Od svog otvaranja, pa do danas njeguje i
                             nudi svojim gostima hercegovačke specijalitete. Ono
                             po čemu je restoran prepoznatljiv je jagnjetina sa
-                            ražnja, koja je ujedno specijaltet kuće. Sam objekat
-                            je izgrađen u hercegovačkom stilu sa moderno
-                            uređenim unutrašnjim enterijerom. <br />
+                            ražnja, koja je ujedno specijaltet kuće. <br />
                             <br />
                             U sastavu objekta nalazi se restoran koji raspolaže
                             sa oko 250 mjesta, od toga 100 mjesta u zatvorenom
@@ -179,7 +180,7 @@
                             i apartmanom.
                         </p>
 
-                        <div class="about__actions">
+                        <div class="about__actions slideInUp">
                             <div>
                                 <a href="#menu" class="btn smooth-scroll"
                                     >Jelovnik</a
@@ -194,9 +195,9 @@
                     </div>
 
                     <div class="about__offer">
-                        <h2 class="about__offer-heading">Sadržaj</h2>
+                        <h2 class="about__offer-heading slideInUp">Sadržaj</h2>
                         <div class="about__offer-boxes">
-                            <div class="about__offer-box">
+                            <div class="about__offer-box slideInUp">
                                 <span>Restoran</span>
                                 <a
                                     href="./assets/t2.webp"
@@ -265,7 +266,7 @@
                                     data-title="Restoran"
                                 ></a>
                             </div>
-                            <div class="about__offer-box">
+                            <div class="about__offer-box slideInUp">
                                 <span>Konoba</span>
                                 <a
                                     href="./assets/k2.webp"
@@ -329,7 +330,7 @@
                                     data-title="Konoba"
                                 ></a>
                             </div>
-                            <div class="about__offer-box">
+                            <div class="about__offer-box slideInUp">
                                 <span>Salon</span>
                                 <a
                                     href="./assets/s11.webp"
@@ -398,7 +399,7 @@
                                     data-title="Salon"
                                 ></a>
                             </div>
-                            <div class="about__offer-box">
+                            <div class="about__offer-box slideInUp">
                                 <span>Hotel</span>
                                 <a
                                     href="./assets/sb3.webp"
@@ -456,8 +457,8 @@
         <!-- Menu section -->
         <section id="menu">
             <div class="menu container">
-                <h2>Jelovnik</h2>
-                <div class="swiper menu-swiper">
+                <h2 class="slideInUp">Jelovnik</h2>
+                <div class="swiper menu-swiper slideInUp">
                     <div class="swiper-wrapper menu-swiper__wrapper">
                         <div class="swiper-slide menu-swiper__slide">
                             <h3 class="menu-swiper__price-hint">
@@ -494,7 +495,7 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Sir iz ulja<span>100g</span>
+                                        Sir iz ulja <span>100g</span>
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">6.00</span>
@@ -592,7 +593,7 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Jagnjetina sa ražnja <span>1 kg</span>
+                                        Jagnjetina sa ražnja <span>1kg</span>
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">45.00</span>
@@ -601,7 +602,7 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Teletina ispod sača <span>1 kg</span>
+                                        Teletina ispod sača <span>1kg</span>
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">45.00</span>
@@ -610,7 +611,7 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Kaštradina <span>1 kg</span>
+                                        Kaštradina <span>1kg</span>
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">45.00</span>
@@ -1005,7 +1006,7 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Priganice <span>(Uštipci)</span>
+                                        Priganice <span>(uštipci)</span>
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
@@ -1302,10 +1303,7 @@
 
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
-                                    <p class="menur__meal-name">
-                                        Schwepps
-                                        <span>(Biter Lemon/Tonic)</span>
-                                    </p>
+                                    <p class="menur__meal-name">Schwepps</p>
                                 </div>
                                 <span class="menu__meal-item">3.00</span>
                             </div>
@@ -1446,7 +1444,7 @@
                             <div class="menu__meal">
                                 <div class="menu__meal-item">
                                     <p class="menur__meal-name">
-                                        Exotic <span>(Limeta/Kruška)</span>
+                                        Exotic <span>(limeta/kruška)</span>
                                     </p>
                                 </div>
                                 <span class="menu__meal-item">1.50</span>
@@ -1813,13 +1811,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="menu-swiper__controls slideInUp">
+                    <div
+                        class="swiper-button-next menu-swiper__btn menu-swiper__next-btn"
+                    ></div>
+                    <div
+                        class="swiper-button-prev menu-swiper__btn menu-swiper__prev-btn"
+                    ></div>
+                </div>
                 <div
-                    class="swiper-button-next menu-swiper__btn menu-swiper__next-btn"
+                    class="swiper-pagination menu-swiper__slide-counter slideInUp"
                 ></div>
-                <div
-                    class="swiper-button-prev menu-swiper__btn menu-swiper__prev-btn"
-                ></div>
-                <div class="swiper-pagination menu-swiper__slide-counter"></div>
             </div>
         </section>
 
@@ -1827,18 +1829,20 @@
         <section id="contact">
             <div class="contact container">
                 <div class="contact__content">
-                    <h2>Kontakt</h2>
-                    <p>Motel Konak, Trebinje-Mosko</p>
-                    <p>Radno vrijeme: 06:30-23:00</p>
+                    <h2 class="slideInUp">Kontakt</h2>
+                    <p class="slideInUp">Motel Konak, Trebinje-Mosko</p>
+                    <p class="slideInUp">Radno vrijeme: 06:30-23:00</p>
 
-                    <p><a href="tel:+387 59 481 288">+387 59 481 288</a></p>
-                    <p>
+                    <p class="slideInUp">
+                        <a href="tel:+387 59 481 288">+387 59 481 288</a>
+                    </p>
+                    <p class="slideInUp">
                         <a href="mailto:motelkonak@yahoo.com"
                             >motelkonak@yahoo.com</a
                         >
                     </p>
 
-                    <div class="contact__links">
+                    <div class="contact__links slideInUp">
                         <a
                             href="https://www.facebook.com/MotelKonakMosko/"
                             target="_blank"
@@ -1861,7 +1865,7 @@
                         >
                     </div>
                 </div>
-                <div class="contact__copyright">
+                <div class="contact__copyright slideInUp">
                     <span>©Motel Konak 2022.</span>
                     <span
                         ><a href="https://srdjancolovic.com/"

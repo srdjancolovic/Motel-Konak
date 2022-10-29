@@ -7,11 +7,18 @@
     height: 100vh;
 
     @include mq('to', 577) {
-        height: 70vh;
+        height: 100vh;
     }
 
     &__slide {
         position: relative;
+
+        &--show-mobile {
+            display: none;
+            @include mq('to', 1025) {
+                display: block;
+            }
+        }
 
         &::after {
             content: '';
@@ -61,6 +68,17 @@
         font-style: italic;
     }
 
+    &__controls {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include mq('to', 1400) {
+            top: 90%;
+        }
+    }
+
     &__next-btn,
     &__prev-btn {
         color: $gold;
@@ -98,7 +116,6 @@
         }
 
         @include mq('to', 1400) {
-            top: 90%;
             right: 25px;
         }
     }
@@ -111,12 +128,10 @@
         }
 
         @include mq('fromto', 768, 1400) {
-            top: 90%;
             left: 85%;
         }
 
         @include mq('to', 768) {
-            top: 90%;
             left: 25px;
         }
     }

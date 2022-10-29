@@ -70,7 +70,9 @@
 
                 &::before,
                 &::after {
-                    width: 0 !important;
+                    @include mq('to', 577) {
+                        width: 0 !important;
+                    }
                 }
 
                 @include linkHover;

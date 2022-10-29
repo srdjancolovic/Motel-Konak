@@ -73,6 +73,16 @@ window.addEventListener('load', () => {
         },
         effect: 'fade',
     });
+
+    //Landing page elements animation
+    const timeline = gsap.timeline({ defaults: { duration: 0.7 } });
+    timeline
+        .from('.header__logo', { y: -50, opacity: 0 })
+        .from('.header__menu-toggler', {
+            y: -50,
+            opacity: 0,
+        })
+        .from('.main__info', { y: 50, opacity: 0 });
 });
 
 //Check window offset from top to toggle header classes
@@ -81,10 +91,8 @@ window.onscroll = () => {
 
     if (scrollFromTop > 80) {
         header.classList.add('header--scrolled');
-        // topBtn.classList.add('top-btn--show');
     } else {
         header.classList.remove('header--scrolled');
-        // topBtn.classList.remove('top-btn--show');
     }
 };
 
@@ -124,3 +132,34 @@ if (ua.indexOf('safari') != -1) {
         });
     }
 }
+
+//Animations
+//Callback function for target
+const callback = function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            entry.target.timeline.play();
+        }
+    });
+};
+
+//Intersection observer
+const observer = new IntersectionObserver(callback, {
+    root: null,
+    threshold: 0.5,
+});
+
+///SlideInUp Animation
+
+const slideInUpAnim = document.querySelectorAll('.slideInUp');
+slideInUpAnim.forEach(function (item) {
+    const action = gsap
+        .timeline({ paused: true })
+        .from(item, { y: 40, opacity: 0, duration: 0.6, delay: 0.5 });
+
+    item.timeline = action;
+});
+
+Array.prototype.forEach.call(slideInUpAnim, (el) => {
+    observer.observe(el);
+});
